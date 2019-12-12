@@ -8,16 +8,22 @@ import { Provider as ThemeProvider } from 'react-native-paper';
 
 import reducers from './reducers';
 import Router from './Router';
+import { theme } from './shared/theme/';
 
 const store = createStore(
   reducers,
   applyMiddleware(thunk)
 );
 
+
 const App = () => {
   return (
     <Provider store={store}>
-      <Router />
+      <ThemeProvider theme={theme}>
+
+        <Router />
+        
+      </ThemeProvider>
     </Provider>
   );
 };

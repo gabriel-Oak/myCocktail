@@ -1,4 +1,4 @@
-import homeReducer from './pages/Home/HomeReducer';
+import homeReducer from './pages/Home/homeReducer';
 
 import { combineReducers } from 'redux';
 
