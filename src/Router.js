@@ -1,9 +1,10 @@
-import { createAppContainer, ThemeContext } from "react-navigation";
+import { createAppContainer } from "react-navigation";
 import { createStackNavigator } from "react-navigation-stack";
 
 import { theme } from './shared/theme/';
 
 import Homepage from "./pages/Home";
+import LookUpPage from "./pages/LookUp";
 
 const Router = createAppContainer(
   createStackNavigator(
@@ -17,6 +18,9 @@ const Router = createAppContainer(
             backgroundColor: theme.colors.primary,
           }
         }
+      },
+      LookUp: {
+        screen: LookUpPage
       }
     },
     {

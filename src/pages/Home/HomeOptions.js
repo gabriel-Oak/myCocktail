@@ -1,8 +1,12 @@
 import React from 'react';
 
-import { Text } from 'react-native';
-
+import { Text, ImageBackground } from 'react-native';
 import { CenterView, Option } from './styles';
+
+import OrangeDrink from '../../shared/assets/orange-drink.png';
+import RedDrink from '../../shared/assets/red-drink.png';
+import YellowDrink from '../../shared/assets/yellow-drink.png';
+import BlueDrink from '../../shared/assets/blue-drink.png';
 
 const HomeOptions = props => {
   return (
@@ -10,19 +14,51 @@ const HomeOptions = props => {
       <CenterView>
 
         <Option>
-          <Text> Por nome </Text>
+          <ImageBackground
+            source={OrangeDrink}
+            style={{
+              width: '100%',
+              height: '100%'
+            }}
+          >
+            <Text> Por nome </Text>
+          </ImageBackground>
         </Option>
 
         <Option>
-          <Text> Drinks alcolicos </Text>
+          <ImageBackground
+            source={RedDrink}
+            style={{
+              width: '100%',
+              height: '100%'
+            }}
+          >
+            <Text> Drinks alcolicos </Text>
+          </ImageBackground>
         </Option>
 
         <Option>
-          <Text> Categoria </Text>
+          <ImageBackground
+            source={BlueDrink}
+            style={{
+              width: '100%',
+              height: '100%'
+            }}
+          >
+            <Text> Categoria </Text>
+          </ImageBackground>
         </Option>
 
         <Option>
-          <Text> Copos </Text>
+          <ImageBackground
+            source={YellowDrink}
+            style={{
+              width: '100%',
+              height: '100%'
+            }}
+          >
+            <Text> Copos </Text>
+          </ImageBackground>
         </Option>
 
       </CenterView>

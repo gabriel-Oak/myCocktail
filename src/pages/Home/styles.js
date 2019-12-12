@@ -37,9 +37,11 @@ export const Option = styled(Card)`
   width: 49%;
   height: 100%;
   margin-bottom: 10px;
+  overflow: hidden;
 `;
 
 export const BottomCard = styled(Card)`
   width: 100%;
   height: 30%;
+  overflow: hidden;
 `;
