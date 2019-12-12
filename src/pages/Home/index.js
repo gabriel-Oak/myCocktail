@@ -1,15 +1,40 @@
 import React, { Component } from 'react';
 
 import { Text } from 'react-native';
+import { Subheading } from 'react-native-paper';
 
-// import { Container } from './styles';
+import { Container } from '../../shared/theme/containers';
+
+import {
+  BottomCard,
+  HeaderView,
+  PaddedContainer,
+  Subheader
+} from './styles';
+
+import HomeOptions from './HomeOptions';
 
 class Homepage extends Component {
   render() {
     return (
-      <Text>
-        Olá !
-      </Text>
+      <Container>
+
+        <HeaderView />
+
+        <Subheader>Procurar Drinks</Subheader>
+
+        <PaddedContainer>
+
+          <HomeOptions />
+
+          <BottomCard>
+            <Text>
+              Esperimente um drink aleatório
+          </Text>
+          </BottomCard>
+
+        </PaddedContainer>
+      </Container>
     );
   }
 }

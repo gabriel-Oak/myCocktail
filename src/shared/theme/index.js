@@ -6,9 +6,8 @@ export const theme = {
     ...DefaultTheme.colors,
     primary: '#33d353',
     accent: '#008c3a',
-    text: '#fff',
-    surface : '#424242',
-    background : '#424242',
+    contrastPrimaryText: '#000',
+    contrastAccentText: '#fff'
   },
   dark: true,
   mode : 'exact'
