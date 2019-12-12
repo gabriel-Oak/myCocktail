@@ -20,7 +20,14 @@ const Router = createAppContainer(
         }
       },
       LookUp: {
-        screen: LookUpPage
+        screen: LookUpPage,
+        navigationOptions: ({ navigation }) => ({
+          title: navigation.state.params.title,
+          headerTintColor: theme.colors.contrastAccentText,
+          headerStyle: {
+            backgroundColor: theme.colors.accent
+          }
+        })
       }
     },
     {

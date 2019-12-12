@@ -28,7 +28,7 @@ class Homepage extends Component {
       <Container>
         <HeaderView />
 
-        <Subheader>Procurar Drinks</Subheader>
+        <Subheader>Search For Drinks</Subheader>
 
         <PaddedContainer>
           <HomeOptions />
@@ -46,7 +46,7 @@ class Homepage extends Component {
                   height: '100%'
                 }}
               >
-                <Subheader>Experimente um drink aleatório</Subheader>
+                <Subheader>Try a random drink today!</Subheader>
               </ImageBackground>
             </RectButton>
           </BottomCard>

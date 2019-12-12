@@ -21,7 +21,7 @@ const HomeOptions = props => {
               height: '100%'
             }}
           >
-            <Text> Por nome </Text>
+            <Text> By Name </Text>
           </ImageBackground>
         </Option>
 
@@ -33,7 +33,7 @@ const HomeOptions = props => {
               height: '100%'
             }}
           >
-            <Text> Drinks alcolicos </Text>
+            <Text> Alcoholic Drinks </Text>
           </ImageBackground>
         </Option>
 
@@ -45,7 +45,7 @@ const HomeOptions = props => {
               height: '100%'
             }}
           >
-            <Text> Categoria </Text>
+            <Text> Category </Text>
           </ImageBackground>
         </Option>
 
@@ -57,7 +57,7 @@ const HomeOptions = props => {
               height: '100%'
             }}
           >
-            <Text> Copos </Text>
+            <Text> Filter by Glass </Text>
           </ImageBackground>
         </Option>
 

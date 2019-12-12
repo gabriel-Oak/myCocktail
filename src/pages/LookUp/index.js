@@ -1,13 +1,44 @@
 import React, { Component } from 'react';
 
-import { View } from 'react-native';
+import { connect } from 'react-redux';
 
-// import { Container } from './styles';
+import { PaddedContainer } from './styles';
+import { ScrollContainer } from '../../shared/theme/containers';
+import DrinkCard from './DrinkCard';
+import DrinkIngredients from './DrinkIngredients';
 
 class LookUpPage extends Component {
+
   render() {
-    return <View />;
+    const { lookUpDrink } = this.props;
+    console.log(this.props);
+
+    return (
+      <PaddedContainer>
+        <ScrollContainer>
+
+          {
+            lookUpDrink &&
+            <DrinkCard
+              {...lookUpDrink}
+            />
+          }
+
+          {
+            lookUpDrink &&
+            <DrinkIngredients
+              drink={lookUpDrink}
+            />
+          }
+        </ScrollContainer>
+      </PaddedContainer>
+    );
   }
 }
 
-export default LookUpPage;
+const mapStateToProps = state => {
+  const { mainReducer } = state;
+  return mainReducer;
+};
+
+export default connect(mapStateToProps)(LookUpPage);

@@ -11,7 +11,9 @@ const mainReducer = (state = INITIAL_STATE, action) => {
     case 'COMPLETE':
       return { ...state, loading: false }
 
-    case 'LOOKUP_DRINKS':
+    case 'LOOKUP_DRINK':
+      console.log(action);
+      
       return { ...state, lookUpDrink: action.drink }
 
     default:

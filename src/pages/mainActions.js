@@ -3,21 +3,20 @@ import { api } from '../enviroments';
 
 export const randomDrink = (navigate) => async dispatch => {
   try {
-    console.log('1');
-
+    
     dispatch({
       type: 'SENDING'
     });
 
     const { data: { drinks } } = await axios.get(api.random);
-
+    
     dispatch({
       type: 'LOOKUP_DRINK',
       drink: drinks[0]
     });
 
-    navigate('LookUp');
-    
+    navigate('LookUp', { title: drinks[0].strDrink});
+
   } catch (e) {
     console.log(e);
 

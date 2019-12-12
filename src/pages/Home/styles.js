@@ -7,6 +7,8 @@ import { Container } from '../../shared/theme/containers';
 export const PaddedContainer = styled(Container)`
   padding: 10px;
   width: 100%;
+  justify-content: space-between;
+  background-color: transparent;
 `;
 
 export const HeaderView = styled.View`
