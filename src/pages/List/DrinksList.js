@@ -4,28 +4,33 @@ import { Text } from 'react-native';
 import { List, ListItem, ListThumb, ListItemContent, ListItemTitle } from './styles';
 
 const DrinksList = props => {
-  const { drinks, lookUp, navigate } = props;
+  const { drinks, lookUp, navigate, nameFilter } = props;
+  console.log(nameFilter.length);
+  
 
   return (
     <List>
       {
-        drinks && drinks.map((drink, index) => (
-          <ListItem key={index}>
-            <ListItemContent
-              onPress={() => {
-                lookUp(drink.idDrink, navigate);
-              }}
-            >
-              
-              <ListItemTitle>
-                <Text>{drink.strDrink}</Text>
-              </ListItemTitle>
+        drinks && drinks.map((drink, index) =>
+          (!nameFilter.length || drink.strDrink.includes(nameFilter)) &&
+          (
+            <ListItem key={index}>
+              <ListItemContent
+                onPress={() => {  
+                  lookUp(drink.idDrink, navigate);
+                }}
+              >
 
-              <ListThumb source={{ uri: drink.strDrinkThumb }} />
+                <ListItemTitle>
+                  <Text>{drink.strDrink}</Text>
+                </ListItemTitle>
 
-            </ListItemContent>
-          </ListItem>
-        ))
+                <ListThumb source={{ uri: drink.strDrinkThumb }} />
+
+              </ListItemContent>
+            </ListItem>
+          )
+        )
       }
     </List>
   );

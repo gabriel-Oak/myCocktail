@@ -8,26 +8,30 @@ import { theme } from '../../shared/theme';
 
 //State separated from view for unit test
 export const ListFiltersState = props => {
-  const { onSubmit, type } = props;
+  const { onSubmit, type, changeNameFilter, loading, nameFilter } = props;
 
-  const [name, setName] = useState();
   const [alcholic, setAlcholic] = useState();
   const [filter, setFilter] = useState();
 
   return {
     input: {
-      value: name,
-      onChangeText: text => setName(text)
+      value: nameFilter,
+      onChangeText: text => {
+        changeNameFilter(text);
+      }
     },
     pickerState: {
       selectedValue: filter,
+      enabled: !loading,
       onValueChange: (value, _index) => {
         setFilter(value);
+
         onSubmit(`${type}=${value}`);
       }
     },
     switchState: {
       value: alcholic,
+      disabled: loading,
       onValueChange: (value) => {
         setAlcholic(value);
 
@@ -38,6 +42,7 @@ export const ListFiltersState = props => {
 }
 
 const ListFilters = props => {
+
   const { type, categories, ingredients, glass } = props;
   const { input, pickerState, switchState } = ListFiltersState(props);
 

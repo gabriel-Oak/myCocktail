@@ -79,3 +79,8 @@ export const lookUpDrink = (drinkId, navigate) => async dispatch => {
     dispatch({ type: 'COMPLETE' });
   }
 }
+
+export const changeNameFilter = text => ({
+  type: 'CHANGE_NAME_FILTER',
+  text
+});

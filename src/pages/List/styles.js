@@ -10,7 +10,7 @@ export const Input = styled(TextInput)`
   border-radius: 4px;
   margin: 6px 0;
   font-size: 16px;
-  padding-left: 12px;
+  padding: 12px 16px;
 `;
 
 export const Select = styled(Picker)`

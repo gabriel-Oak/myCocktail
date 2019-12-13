@@ -2,7 +2,8 @@ const INITIAL_STATE = {
   categories: [],
   ingredients: [],
   glass: [],
-  drinks: []
+  drinks: [],
+  nameFilter: ''
 };
 
 const listReducer = (state = INITIAL_STATE, action) => {
@@ -18,6 +19,9 @@ const listReducer = (state = INITIAL_STATE, action) => {
 
     case 'FETCH_DRINKS':
       return { ...state, drinks: action.drinks }
+
+    case 'CHANGE_NAME_FILTER':
+      return { ...state, nameFilter: action.text }
 
     default:
       return state;
