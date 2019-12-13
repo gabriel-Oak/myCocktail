@@ -9,17 +9,15 @@ const DrinkIngredients = props => {
 
   useEffect(() => {
     let tempItems = '';
-    const tempIngredients = Object.keys(drink).filter(
-      key => /Ingredient/i.test(key) && drink[key]
-    );
-    const tempMeasures = Object.keys(drink).filter(
-      key => /Measure/i.test(key) && drink[key]
-    );
+  
+    Object.keys(drink).forEach(key => {
+      if (/strIngredient/i.test(key) && drink[key]) {
 
-    tempIngredients.forEach((key, index) => {
-
-      tempItems += `${drink[tempMeasures[index]]} ${drink[key]} ${tempItems.length ? ' / ' : ' / '}`
-
+        const index = key.slice(13);
+        const measure = drink[`strMeasure${index}`] || ''; 
+        
+        tempItems += `${tempItems.length ? ',' : ''} ${measure} ${drink[key]}`;
+      }
     });
 
     setIngredients(tempItems);

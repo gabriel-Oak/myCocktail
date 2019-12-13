@@ -12,8 +12,6 @@ const mainReducer = (state = INITIAL_STATE, action) => {
       return { ...state, loading: false }
 
     case 'LOOKUP_DRINK':
-      console.log(action);
-      
       return { ...state, lookUpDrink: action.drink }
 
     default:

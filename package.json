@@ -12,6 +12,7 @@
   "dependencies": {
     "axios": "^0.19.0",
     "react": "16.9.0",
+    "react-dom": "^16.12.0",
     "react-native": "0.61.5",
     "react-native-gesture-handler": "^1.5.2",
     "react-native-paper": "^3.3.0",
@@ -34,6 +35,31 @@
     "react-test-renderer": "16.9.0"
   },
   "jest": {
-    "preset": "react-native"
+    "preset": "react-native",
+    "transform": {
+      "^.+\\.js$": [
+        "babel-jest",
+        {
+          "rootMode": "upward"
+        }
+      ]
+    },
+    "transformIgnorePatterns": [
+      "node_modules/(?!react-native|native-base-shoutem-theme|react-navigation|@shoutem/animation|@shoutem/ui|tcomb-form-native|react-native-screens)"
+    ],
+    "haste": {
+      "defaultPlatform": "android",
+      "platforms": [
+        "ios",
+        "android"
+      ],
+      "providesModuleNodeModules": [
+        "react-native"
+      ]
+    },
+    "unmockedModulePathPatterns": [
+      "promise",
+      "source-map"
+    ]
   }
 }

@@ -26,13 +26,16 @@ const Router = createAppContainer(
           headerTintColor: theme.colors.contrastAccentText,
           headerStyle: {
             backgroundColor: theme.colors.accent
-          }
+          },
         })
       }
     },
     {
       initialRouteName: 'Home',
       headerMode: "screen",
+      cardStyle: {
+        backgroundColor: theme.colors.background
+      }
     }
   )
 );

@@ -14,8 +14,8 @@ class LookUpPage extends Component {
     console.log(this.props);
 
     return (
-      <PaddedContainer>
-        <ScrollContainer>
+      <ScrollContainer>
+        <PaddedContainer>
 
           {
             lookUpDrink &&
@@ -30,8 +30,8 @@ class LookUpPage extends Component {
               drink={lookUpDrink}
             />
           }
-        </ScrollContainer>
-      </PaddedContainer>
+        </PaddedContainer>
+      </ScrollContainer>
     );
   }
 }

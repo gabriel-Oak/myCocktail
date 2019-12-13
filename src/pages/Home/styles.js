@@ -1,6 +1,6 @@
 import styled from 'styled-components/native';
 
-import { Card, Subheading } from 'react-native-paper';
+import { Card, Subheading, ProgressBar } from 'react-native-paper';
 import { theme } from '../../shared/theme/';
 import { Container } from '../../shared/theme/containers';
 
@@ -24,7 +24,7 @@ export const Subheader = styled(Subheading)`
   width: 100%;
   text-align: left;
   padding-left: 10px;
-  color: ${theme.colors.contrastAccentText}
+  color: ${theme.colors.contrastAccentText};
 `;
 
 export const CenterView = styled.View`
@@ -46,4 +46,8 @@ export const BottomCard = styled(Card)`
   width: 100%;
   height: 30%;
   overflow: hidden;
+`;
+
+export const Progress = styled(ProgressBar)`
+  position: absolute;
 `;

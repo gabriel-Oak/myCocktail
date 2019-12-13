@@ -1,14 +1,7 @@
-/**
- * @format
- */
 
-import 'react-native';
-import React from 'react';
-import App from '../App';
+import mainReducer from '../src/pages/mainReducer';
 
-// Note: test renderer must be required after react-native.
-import renderer from 'react-test-renderer';
-
-it('renders correctly', () => {
-  renderer.create(<App />);
+it('should set the drink', () => {
+  const result = mainReducer(null, { type: 'LOOKUP_DRINK', drink: { drink: 'mock' } });
+  expect(result.lookUpDrink).toEqual({ drink: 'mock' });
 });

@@ -4,6 +4,7 @@ import { Card } from 'react-native-paper';
 
 export const PaddedContainer = styled(Container)`
   padding: 10px;
+  flex: 1;
 `;
 
 export const CoverCard = styled(Card)`
