@@ -5,6 +5,7 @@ import { theme } from './shared/theme/';
 
 import Homepage from "./pages/Home";
 import LookUpPage from "./pages/LookUp";
+import ListPage from "./pages/List";
 
 const Router = createAppContainer(
   createStackNavigator(
@@ -15,7 +16,7 @@ const Router = createAppContainer(
           title: 'MyCocktail',
           headerTintColor: theme.colors.contrastPrimaryText,
           headerStyle: {
-            backgroundColor: theme.colors.primary,
+            backgroundColor: theme.colors.accent,
           }
         }
       },
@@ -27,6 +28,16 @@ const Router = createAppContainer(
           headerStyle: {
             backgroundColor: theme.colors.accent
           },
+        })
+      },
+      List: {
+        screen: ListPage,
+        navigationOptions: ({ navigation }) => ({
+          title: `Serch ${navigation.state.params.title}`,
+          headerTintColor: theme.colors.contrastAccentText,
+          headerStyle: {
+            backgroundColor: theme.colors.accent
+          }
         })
       }
     },

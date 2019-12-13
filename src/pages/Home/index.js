@@ -2,19 +2,17 @@ import React, { Component } from 'react';
 
 import { ImageBackground } from 'react-native';
 import { connect } from 'react-redux';
-import { ProgressBar } from 'react-native-paper';
 
 
 import { Container } from '../../shared/theme/containers';
+import { Progress } from '../../shared/theme/progress';
 import DrinksWood from '../../shared/assets/wood-drinks.png';
 import { randomDrink } from '../mainActions';
 
 import {
   BottomCard,
-  HeaderView,
   PaddedContainer,
-  Subheader,
-  Progress
+  Subheader
 } from './styles';
 
 import HomeOptions from './HomeOptions';
@@ -28,12 +26,12 @@ class Homepage extends Component {
 
     return (
       <Container>
-        <HeaderView />
-
         <Subheader>Search For Drinks</Subheader>
 
         <PaddedContainer>
-          <HomeOptions />
+          <HomeOptions
+            navigate={navigation.navigate}
+          />
 
           <BottomCard
             onPress={() => {
@@ -49,7 +47,7 @@ class Homepage extends Component {
             >
               {
                 loading &&
-                <Progress indeterminate color={theme.colors.accent} />
+                <Progress indeterminate color={theme.colors.primary} />
               }
               <Subheader>Try a random drink today!</Subheader>
             </ImageBackground>

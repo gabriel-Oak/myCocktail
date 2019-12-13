@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 
 import { connect } from 'react-redux';
 
-import { PaddedContainer } from './styles';
-import { ScrollContainer } from '../../shared/theme/containers';
+import { ScrollContainer, PaddedContainer } from '../../shared/theme/containers';
 import DrinkCard from './DrinkCard';
 import DrinkIngredients from './DrinkIngredients';
 

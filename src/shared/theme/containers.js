@@ -8,6 +8,12 @@ export const Container = styled.View`
   background-color: ${theme.colors.background};
 `;
 
+export const PaddedContainer = styled(Container)`
+  padding: 10px;
+  flex: 1;
+`;
+
+
 export const ScrollContainer = styled(ScrollView)`
   flex: 1;
   width: 100%;

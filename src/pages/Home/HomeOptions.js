@@ -9,11 +9,19 @@ import YellowDrink from '../../shared/assets/yellow-drink.png';
 import BlueDrink from '../../shared/assets/blue-drink.png';
 
 const HomeOptions = props => {
+  const { navigate } = props;
+
+  const handleNavigate = (title, type) => {
+    navigate('List', { title, type });
+  };
+
   return (
     <>
       <CenterView>
 
-        <Option>
+        <Option
+          onPress={() => handleNavigate('by Ingredient', 'i')}
+        >
           <ImageBackground
             source={OrangeDrink}
             style={{
@@ -21,23 +29,13 @@ const HomeOptions = props => {
               height: '100%'
             }}
           >
-            <Text> By Name </Text>
+            <Text> By Ingredient </Text>
           </ImageBackground>
         </Option>
 
-        <Option>
-          <ImageBackground
-            source={RedDrink}
-            style={{
-              width: '100%',
-              height: '100%'
-            }}
-          >
-            <Text> Alcoholic Drinks </Text>
-          </ImageBackground>
-        </Option>
-
-        <Option>
+        <Option
+          onPress={() => handleNavigate('by Category', 'c')}
+        >
           <ImageBackground
             source={BlueDrink}
             style={{
@@ -49,7 +47,23 @@ const HomeOptions = props => {
           </ImageBackground>
         </Option>
 
-        <Option>
+        <Option
+          onPress={() => handleNavigate('Alcholic Drinks', 'a')}
+        >
+          <ImageBackground
+            source={RedDrink}
+            style={{
+              width: '100%',
+              height: '100%'
+            }}
+          >
+            <Text> Alcoholic Drinks </Text>
+          </ImageBackground>
+        </Option>
+
+        <Option
+          onPress={() => handleNavigate('by Glass', 'g')}
+        >
           <ImageBackground
             source={YellowDrink}
             style={{
