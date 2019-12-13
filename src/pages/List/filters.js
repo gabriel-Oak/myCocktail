@@ -85,8 +85,8 @@ const ListFilters = props => {
       }
 
       <Input
-        label='Drink Name'
-        mode='outlined'
+        placeholder='Filter by drink Name'
+        mode='flat'
         {...input}
       />
     </Form>

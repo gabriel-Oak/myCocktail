@@ -1,11 +1,15 @@
 import styled from 'styled-components/native';
-import { TextInput } from 'react-native-paper';
 import { RectButton } from 'react-native-gesture-handler';
 import { theme } from '../../shared/theme';
-import { Picker } from 'react-native';
+import { Picker, TextInput } from 'react-native';
 
 export const Input = styled(TextInput)`
   flex: 1;
+  border: 2px solid ${theme.colors.primary};
+  border-radius: 4px;
+  margin: 6px 0;
+  font-size: 16px;
+  padding-left: 12px;
 `;
 
 export const Select = styled(Picker)`
