@@ -9,12 +9,12 @@ export const fetchFilters = type => async dispatch => {
 
     const { data: { drinks } } = await axios.get(`${api.listFilters}?${type}=list`);
 
-    const filters = drinks.map(filter => {      
+    const filters = drinks.map(filter => {
       const label = filter.strGlass
         || filter.strCategory
         || filter.strIngredient1;
 
-      const value = transformString( 
+      const value = transformString(
         filter.strGlass
         || filter.strCategory
         || filter.strIngredient1
@@ -24,7 +24,7 @@ export const fetchFilters = type => async dispatch => {
         label,
         value
       }
-    });    
+    });
 
     dispatch({
       type: `FETCH_FILTERS_${type}`,
@@ -34,6 +34,25 @@ export const fetchFilters = type => async dispatch => {
   } catch (e) {
 
     console.log(e, 'erro');
+
+  } finally {
+    dispatch({ type: 'COMPLETE' });
+  }
+}
+
+export const fetchDrinks = query => async dispatch => {
+  try {
+    dispatch({ type: 'SENDING' });
+
+    const { data: {drinks} } = await axios.get(`${api.filter}?${query}`);
+
+    dispatch({
+      type: 'FETCH_DRINKS',
+      drinks
+    });
+
+  } catch (e) {
+    console.log(e);
 
   } finally {
     dispatch({ type: 'COMPLETE' });

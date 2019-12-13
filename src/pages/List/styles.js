@@ -22,9 +22,17 @@ export const SelectWrapper = styled.View`
 
 export const Form = styled.View`
   width: 100%;
+  margin-top: 4px;
 `;
 
-export const RowContainer = styled(Form)`
+export const RowContainer = styled.View`
   flex-direction: row;
   justify-content: space-between;
+  width: 100%;
+`;
+
+export const List = styled.View`
+  flex: 1;
+  /* position: absolute; */
+  /* top: 50px; */
 `;

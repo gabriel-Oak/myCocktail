@@ -3,14 +3,15 @@ import React, { useState } from 'react';
 import { Title } from 'react-native-paper';
 import { Switch } from 'react-native';
 import { Input, Form, RowContainer } from './styles';
-import SelectFilter from './select';
+import SelectFilter from './Select';
+import { theme } from '../../shared/theme';
 
 //State separated from view for unit test
 export const ListFiltersState = props => {
   const { onSubmit, type } = props;
 
   const [name, setName] = useState();
-  const [alcholic, setAlcholic] = useState(true);
+  const [alcholic, setAlcholic] = useState();
   const [filter, setFilter] = useState();
 
   return {
@@ -40,6 +41,10 @@ const ListFilters = props => {
   const { type, categories, ingredients, glass } = props;
   const { input, pickerState, switchState } = ListFiltersState(props);
 
+  if (switchState.value === undefined && type === 'a') {
+    switchState.onValueChange(true);
+  }
+
   return (
     <Form>
 
@@ -55,7 +60,11 @@ const ListFilters = props => {
         type === 'a' &&
         <RowContainer>
           <Title>Alcholic Drinks</Title>
-          <Switch {...switchState} />
+          <Switch
+            thumbColor={theme.colors.primary}
+            trackColor={theme.colors.accent}
+            {...switchState}
+          />
         </RowContainer>
       }
 

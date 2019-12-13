@@ -1,7 +1,8 @@
 const INITIAL_STATE = {
   categories: [],
   ingredients: [],
-  glass: []
+  glass: [],
+  drinks: []
 };
 
 const listReducer = (state = INITIAL_STATE, action) => {
@@ -15,6 +16,9 @@ const listReducer = (state = INITIAL_STATE, action) => {
     case 'FETCH_FILTERS_g':
       return { ...state, glass: action.filters }
 
+    case 'FETCH_DRINKS':
+      return { ...state, drinks: action.drinks }
+      
     default:
       return state;
   }
