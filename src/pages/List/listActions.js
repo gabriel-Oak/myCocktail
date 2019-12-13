@@ -44,12 +44,33 @@ export const fetchDrinks = query => async dispatch => {
   try {
     dispatch({ type: 'SENDING' });
 
-    const { data: {drinks} } = await axios.get(`${api.filter}?${query}`);
+    const { data: { drinks } } = await axios.get(`${api.filter}?${query}`);
 
     dispatch({
       type: 'FETCH_DRINKS',
       drinks
     });
+
+  } catch (e) {
+    console.log(e);
+
+  } finally {
+    dispatch({ type: 'COMPLETE' });
+  }
+}
+
+export const lookUpDrink = (drinkId, navigate) => async dispatch => {
+  try {
+    dispatch({ type: 'SENDING' });
+
+    const { data: { drinks } } = await axios.get(`${api.lookup}?i=${drinkId}`);
+
+    dispatch({
+      type: 'LOOKUP_DRINK',
+      drink: drinks[0]
+    });
+
+    navigate('LookUp', { title: drinks[0].strDrink });
 
   } catch (e) {
     console.log(e);

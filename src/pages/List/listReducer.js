@@ -18,7 +18,7 @@ const listReducer = (state = INITIAL_STATE, action) => {
 
     case 'FETCH_DRINKS':
       return { ...state, drinks: action.drinks }
-      
+
     default:
       return state;
   }

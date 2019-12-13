@@ -33,7 +33,7 @@ const Router = createAppContainer(
       List: {
         screen: ListPage,
         navigationOptions: ({ navigation }) => ({
-          title: `Serch ${navigation.state.params.title}`,
+          title: `Search ${navigation.state.params.title}`,
           headerTintColor: theme.colors.contrastAccentText,
           headerStyle: {
             backgroundColor: theme.colors.accent

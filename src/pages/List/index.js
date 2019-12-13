@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { ProgressBar } from 'react-native-paper';
 import { ScrollContainer, PaddedContainer } from '../../shared/theme/containers';
 import ListFilters from './Filters';
-import { fetchFilters, fetchDrinks } from './listActions';
+import { fetchFilters, fetchDrinks, lookUpDrink } from './listActions';
 import { connect } from 'react-redux';
 import { theme } from '../../shared/theme';
 import DrinksList from './DrinksList';
@@ -29,13 +29,17 @@ class ListPage extends Component {
       ingredients,
       glass,
       drinks,
+      fetchDrinks,
+      lookUpDrink,
       navigation: {
-        state: { params: { type }
-        }
+        state: {
+          params: { type }
+        },
+        navigate
       }
     } = this.props;
     console.log(drinks);
-    
+
     return (
       <ScrollContainer>
         {
@@ -49,11 +53,16 @@ class ListPage extends Component {
             categories={categories}
             ingredients={ingredients}
             glass={glass}
-            onSubmit={this.handleSubmit}
+            onSubmit={fetchDrinks}
           />
 
           {
-            !!drinks.length && <DrinksList drinks={drinks} />
+            !!drinks.length &&
+            <DrinksList
+              drinks={drinks}
+              lookUp={lookUpDrink}
+              navigate={navigate}
+            />
           }
         </PaddedContainer>
       </ScrollContainer>
@@ -71,7 +80,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = {
   fetchFilters,
-  fetchDrinks
+  fetchDrinks,
+  lookUpDrink
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(ListPage);

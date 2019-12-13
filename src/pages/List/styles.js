@@ -2,6 +2,7 @@ import styled from 'styled-components/native';
 import { RectButton } from 'react-native-gesture-handler';
 import { theme } from '../../shared/theme';
 import { Picker, TextInput } from 'react-native';
+import { Card } from 'react-native-paper';
 
 export const Input = styled(TextInput)`
   flex: 1;
@@ -37,6 +38,28 @@ export const RowContainer = styled.View`
 
 export const List = styled.View`
   flex: 1;
-  /* position: absolute; */
-  /* top: 50px; */
+  width: 100%;
+  margin-top: 12px;
+`;
+
+export const ListItem = styled(Card)`
+  margin-bottom: 8px;
+  overflow: hidden;
+  height: 68px;
+`;
+
+export const ListItemContent = styled(RectButton)`
+  flex-direction: row;
+  height: 100%;
+`;
+
+export const ListItemTitle = styled.View`
+  padding: 16px;
+  width: 60%;
+`;
+
+export const ListThumb = styled.Image`
+  background-color: #fafafa;
+  height: 100%;
+  width: 40%;
 `;

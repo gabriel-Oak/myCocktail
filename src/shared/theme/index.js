@@ -4,12 +4,12 @@ export const theme = {
   ...DefaultTheme,
   colors: {
     ...DefaultTheme.colors,
-    primary: '#651fff',
+    primary: '#0d47a1',
     accent: '#2196f3',
     contrastPrimaryText: '#fff',
-    background: '#fff',
-    surface: '#fafafa',
-    contrastAccentText: '#fff'
+    contrastAccentText: '#fff',
+    background: '#fafafa',
+    surface: '#fff'
   },
   dark: true,
   mode : 'exact'
