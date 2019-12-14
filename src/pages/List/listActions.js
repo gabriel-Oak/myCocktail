@@ -13,7 +13,7 @@ export const fetchFilters = type => async dispatch => {
 
     const { data: { drinks } } = await axios.get(`${api.listFilters}?${type}=list`);
 
-    const filters = drinkss.map(filter => {
+    const filters = drinks.map(filter => {
       const label = filter.strGlass
         || filter.strCategory
         || filter.strIngredient1;
