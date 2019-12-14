@@ -34,7 +34,8 @@ const mainReducer = (state = INITIAL_STATE, action) => {
         ...state,
         modal: {
           visible: false,
-          text: ''
+          text: '',
+          title: ''
         }
       }
 
