@@ -6,6 +6,10 @@ import transformString from '../../shared/utils/transformString';
 export const fetchFilters = type => async dispatch => {
   try {
     dispatch({ type: 'SENDING' });
+    dispatch({
+      type: 'SELECTED_DRINK',
+      index: null
+    });
 
     const { data: { drinks } } = await axios.get(`${api.listFilters}?${type}=list`);
 
@@ -43,6 +47,10 @@ export const fetchFilters = type => async dispatch => {
 export const fetchDrinks = query => async dispatch => {
   try {
     dispatch({ type: 'SENDING' });
+    dispatch({
+      type: 'SELECTED_DRINK',
+      index: null
+    });
 
     const { data: { drinks } } = await axios.get(`${api.filter}?${query}`);
 
@@ -62,6 +70,10 @@ export const fetchDrinks = query => async dispatch => {
 export const lookUpDrink = (drinkId, navigate) => async dispatch => {
   try {
     dispatch({ type: 'SENDING' });
+    dispatch({
+      type: 'SELECTED_DRINK',
+      index: drinkId
+    });
 
     const { data: { drinks } } = await axios.get(`${api.lookup}?i=${drinkId}`);
 
@@ -77,6 +89,10 @@ export const lookUpDrink = (drinkId, navigate) => async dispatch => {
 
   } finally {
     dispatch({ type: 'COMPLETE' });
+    dispatch({
+      type: 'SELECTED_DRINK',
+      index: null
+    });
   }
 }
 

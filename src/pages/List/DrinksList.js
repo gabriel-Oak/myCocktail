@@ -1,12 +1,24 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
-import { Text } from 'react-native';
-import { List, ListItem, ListThumb, ListItemContent, ListItemTitle } from './styles';
+import { Text, ActivityIndicator } from 'react-native';
+import {
+  List,
+  ListItem,
+  ListThumb,
+  ListItemContent,
+  ListItemTitle
+} from './styles';
+import { theme } from '../../shared/theme';
 
 const DrinksList = props => {
-  const { drinks, lookUp, navigate, nameFilter } = props;
-  console.log(nameFilter.length);
-  
+  const {
+    drinks,
+    lookUpDrink,
+    navigate,
+    nameFilter,
+    loading,
+    selectedDrink
+  } = props;
 
   return (
     <List>
@@ -16,16 +28,21 @@ const DrinksList = props => {
           (
             <ListItem key={index}>
               <ListItemContent
-                onPress={() => {  
-                  lookUp(drink.idDrink, navigate);
-                }}
+                onPress={() => !loading && lookUpDrink(drink.idDrink, navigate)}
               >
 
                 <ListItemTitle>
                   <Text>{drink.strDrink}</Text>
                 </ListItemTitle>
 
-                <ListThumb source={{ uri: drink.strDrinkThumb }} />
+
+
+                <ListThumb source={{ uri: drink.strDrinkThumb }}>
+                  {
+                    selectedDrink === drink.idDrink && loading &&
+                    <ActivityIndicator size="large" color={theme.colors.accent} />
+                  }
+                </ListThumb>
 
               </ListItemContent>
             </ListItem>

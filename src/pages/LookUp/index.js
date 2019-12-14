@@ -10,7 +10,6 @@ class LookUpPage extends Component {
 
   render() {
     const { lookUpDrink } = this.props;
-    console.log(this.props);
 
     return (
       <ScrollContainer>

@@ -44,29 +44,26 @@ class ListPage extends Component {
     return (
       <ScrollContainer>
         {
-          loading && <ProgressBar indeterminate color={theme.colors.primary} />
+          loading &&
+          <ProgressBar
+            indeterminate
+            color={theme.colors.primary}
+          />
         }
 
         <PaddedContainer>
 
           <ListFilters
             type={type}
-            categories={categories}
-            ingredients={ingredients}
-            glass={glass}
             onSubmit={fetchDrinks}
-            changeNameFilter={changeNameFilter}
-            nameFilter={nameFilter}
-            loading={loading}
+            {...this.props}
           />
 
           {
             !!drinks.length &&
             <DrinksList
-              drinks={drinks}
-              lookUp={lookUpDrink}
               navigate={navigate}
-              nameFilter={nameFilter}
+              {...this.props}
             />
           }
         </PaddedContainer>

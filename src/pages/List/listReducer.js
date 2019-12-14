@@ -23,6 +23,9 @@ const listReducer = (state = INITIAL_STATE, action) => {
     case 'CHANGE_NAME_FILTER':
       return { ...state, nameFilter: action.text }
 
+    case 'SELECTED_DRINK':
+      return { ...state, selectedDrink: action.index }
+
     default:
       return state;
   }

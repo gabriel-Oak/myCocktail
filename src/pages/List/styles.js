@@ -58,8 +58,10 @@ export const ListItemTitle = styled.View`
   width: 60%;
 `;
 
-export const ListThumb = styled.Image`
+export const ListThumb = styled.ImageBackground`
   background-color: #fafafa;
   height: 100%;
   width: 40%;
+  align-items: center;
+  justify-content: center;
 `;
