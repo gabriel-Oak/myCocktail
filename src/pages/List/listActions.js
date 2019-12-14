@@ -13,7 +13,7 @@ export const fetchFilters = type => async dispatch => {
 
     const { data: { drinks } } = await axios.get(`${api.listFilters}?${type}=list`);
 
-    const filters = drinks.map(filter => {
+    const filters = drinkss.map(filter => {
       const label = filter.strGlass
         || filter.strCategory
         || filter.strIngredient1;
@@ -36,9 +36,13 @@ export const fetchFilters = type => async dispatch => {
     });
 
   } catch (e) {
-
-    console.log(e, 'erro');
-
+    dispatch({
+      type: 'SHOW_MODAL',
+      modal: {
+        text: 'Fetch filters went wrong, please try again later :(',
+        title: 'Error'
+      }
+    });
   } finally {
     dispatch({ type: 'COMPLETE' });
   }
@@ -60,8 +64,13 @@ export const fetchDrinks = query => async dispatch => {
     });
 
   } catch (e) {
-    console.log(e);
-
+    dispatch({
+      type: 'SHOW_MODAL',
+      modal: {
+        text: 'We can\'t found drinks, for some unknow reason, please try again later :(',
+        title: 'Error'
+      }
+    });
   } finally {
     dispatch({ type: 'COMPLETE' });
   }
@@ -85,8 +94,13 @@ export const lookUpDrink = (drinkId, navigate) => async dispatch => {
     navigate('LookUp', { title: drinks[0].strDrink });
 
   } catch (e) {
-    console.log(e);
-
+    dispatch({
+      type: 'SHOW_MODAL',
+      modal: {
+        text: 'Sorry, we can\'t your drink, please try again later :(',
+        title: 'Error'
+      }
+    });
   } finally {
     dispatch({ type: 'COMPLETE' });
     dispatch({

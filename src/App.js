@@ -9,6 +9,7 @@ import { Provider as ThemeProvider } from 'react-native-paper';
 import reducers from './reducers';
 import Router from './Router';
 import { theme } from './shared/theme/';
+import Dialogue from './shared/components/Dialogue';
 
 const store = createStore(
   reducers,
@@ -22,6 +23,7 @@ const App = () => {
       <ThemeProvider theme={theme}>
 
         <Router />
+        <Dialogue />
         
       </ThemeProvider>
     </Provider>

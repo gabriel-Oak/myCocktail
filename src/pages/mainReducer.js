@@ -1,6 +1,11 @@
 const INITIAL_STATE = {
   loading: false,
-  lookUpDrink: null
+  lookUpDrink: null,
+  modal: {
+    visible: false,
+    text: '',
+    title: ''
+  }
 };
 
 const mainReducer = (state = INITIAL_STATE, action) => {
@@ -13,6 +18,25 @@ const mainReducer = (state = INITIAL_STATE, action) => {
 
     case 'LOOKUP_DRINK':
       return { ...state, lookUpDrink: action.drink }
+
+    case 'SHOW_MODAL':
+      return {
+        ...state,
+        modal: {
+          visible: true,
+          text: action.modal.text,
+          title: action.modal.title
+        }
+      }
+
+    case 'CLOSE_MODAL':      
+      return {
+        ...state,
+        modal: {
+          visible: false,
+          text: ''
+        }
+      }
 
     default:
       return state;
