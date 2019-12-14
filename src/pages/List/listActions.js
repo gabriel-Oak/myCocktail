@@ -57,10 +57,10 @@ export const fetchDrinks = query => async dispatch => {
     });
 
     const { data: { drinks } } = await axios.get(`${api.filter}?${query}`);
-
+    
     dispatch({
       type: 'FETCH_DRINKS',
-      drinks
+      drinks: drinks || []
     });
 
   } catch (e) {
