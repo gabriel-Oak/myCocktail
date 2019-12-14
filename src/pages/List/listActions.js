@@ -16,7 +16,7 @@ export const fetchFilters = type => async dispatch => {
     const filters = drinks.map(filter => {
       const label = filter.strGlass
         || filter.strCategory
-        || filter.strIngredient1;
+        || filter.strIngredient1;        
 
       const value = transformString(
         filter.strGlass
@@ -97,7 +97,7 @@ export const lookUpDrink = (drinkId, navigate) => async dispatch => {
     dispatch({
       type: 'SHOW_MODAL',
       modal: {
-        text: 'Sorry, we can\'t your drink, please try again later :(',
+        text: 'Sorry, we can\'t find your drink, please try again later :(',
         title: 'Error'
       }
     });
