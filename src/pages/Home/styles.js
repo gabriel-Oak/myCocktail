@@ -42,6 +42,11 @@ export const Option = styled(Card)`
   overflow: hidden;
 `;
 
+export const TextHeader = styled.Text`
+  background-color: #22222280;
+  color: white;
+`;
+
 export const BottomCard = styled(Card)`
   width: 100%;
   height: 30%;

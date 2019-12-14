@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Text, ImageBackground } from 'react-native';
-import { CenterView, Option } from './styles';
+import { CenterView, Option, TextHeader } from './styles';
 
 import OrangeDrink from '../../shared/assets/orange-drink.png';
 import RedDrink from '../../shared/assets/red-drink.png';
@@ -29,7 +29,7 @@ const HomeOptions = props => {
               height: '100%'
             }}
           >
-            <Text> By Ingredient </Text>
+            <TextHeader> By Ingredient </TextHeader>
           </ImageBackground>
         </Option>
 
@@ -43,7 +43,7 @@ const HomeOptions = props => {
               height: '100%'
             }}
           >
-            <Text> Category </Text>
+            <TextHeader> Category </TextHeader>
           </ImageBackground>
         </Option>
 
@@ -57,7 +57,7 @@ const HomeOptions = props => {
               height: '100%'
             }}
           >
-            <Text> Alcoholic Drinks </Text>
+            <TextHeader> Alcoholic Drinks </TextHeader>
           </ImageBackground>
         </Option>
 
@@ -71,7 +71,7 @@ const HomeOptions = props => {
               height: '100%'
             }}
           >
-            <Text> Filter by Glass </Text>
+            <TextHeader> Filter by Glass </TextHeader>
           </ImageBackground>
         </Option>
 
