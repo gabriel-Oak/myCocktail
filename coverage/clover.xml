@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1576419633487" clover="3.2.0">
-  <project timestamp="1576419633487" name="All files">
-    <metrics statements="64" coveredstatements="64" conditionals="24" coveredconditionals="19" methods="13" coveredmethods="13" elements="101" coveredelements="96" complexity="0" loc="64" ncloc="64" packages="4" files="6" classes="6"/>
+<coverage generated="1576592740248" clover="3.2.0">
+  <project timestamp="1576592740248" name="All files">
+    <metrics statements="78" coveredstatements="78" conditionals="26" coveredconditionals="21" methods="19" coveredmethods="19" elements="123" coveredelements="118" complexity="0" loc="78" ncloc="78" packages="4" files="8" classes="8"/>
     <package name="src">
       <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <file name="enviroments.js" path="C:\Users\gabri\Projetos\myCocktail\src\enviroments.js">
+      <file name="enviroments.js" path="C:\Users\Gabriel Carvalho\Projetos\myCocktail\src\enviroments.js">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="2" type="stmt"/>
         <line num="3" count="2" type="stmt"/>
@@ -12,7 +12,7 @@
     </package>
     <package name="src.pages">
       <metrics statements="17" coveredstatements="17" conditionals="7" coveredconditionals="7" methods="3" coveredmethods="3"/>
-      <file name="mainActions.js" path="C:\Users\gabri\Projetos\myCocktail\src\pages\mainActions.js">
+      <file name="mainActions.js" path="C:\Users\Gabriel Carvalho\Projetos\myCocktail\src\pages\mainActions.js">
         <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
         <line num="4" count="2" type="stmt"/>
         <line num="5" count="2" type="stmt"/>
@@ -23,7 +23,7 @@
         <line num="21" count="1" type="stmt"/>
         <line num="29" count="2" type="stmt"/>
       </file>
-      <file name="mainReducer.js" path="C:\Users\gabri\Projetos\myCocktail\src\pages\mainReducer.js">
+      <file name="mainReducer.js" path="C:\Users\Gabriel Carvalho\Projetos\myCocktail\src\pages\mainReducer.js">
         <metrics statements="9" coveredstatements="9" conditionals="7" coveredconditionals="7" methods="1" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
         <line num="11" count="1" type="cond" truecount="1" falsecount="0"/>
@@ -37,8 +37,21 @@
       </file>
     </package>
     <package name="src.pages.List">
-      <metrics statements="41" coveredstatements="41" conditionals="16" coveredconditionals="11" methods="9" coveredmethods="9"/>
-      <file name="listActions.js" path="C:\Users\gabri\Projetos\myCocktail\src\pages\List\listActions.js">
+      <metrics statements="51" coveredstatements="51" conditionals="18" coveredconditionals="13" methods="13" coveredmethods="13"/>
+      <file name="hooks.js" path="C:\Users\Gabriel Carvalho\Projetos\myCocktail\src\pages\List\hooks.js">
+        <metrics statements="10" coveredstatements="10" conditionals="2" coveredconditionals="2" methods="4" coveredmethods="4"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="7" type="stmt"/>
+        <line num="7" count="7" type="stmt"/>
+        <line num="8" count="7" type="stmt"/>
+        <line num="10" count="7" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
+        <line num="28" count="2" type="stmt"/>
+        <line num="30" count="2" type="cond" truecount="2" falsecount="0"/>
+      </file>
+      <file name="listActions.js" path="C:\Users\Gabriel Carvalho\Projetos\myCocktail\src\pages\List\listActions.js">
         <metrics statements="31" coveredstatements="31" conditionals="8" coveredconditionals="3" methods="8" coveredmethods="8"/>
         <line num="6" count="2" type="stmt"/>
         <line num="7" count="2" type="stmt"/>
@@ -72,7 +85,7 @@
         <line num="106" count="2" type="stmt"/>
         <line num="113" count="1" type="stmt"/>
       </file>
-      <file name="listReducer.js" path="C:\Users\gabri\Projetos\myCocktail\src\pages\List\listReducer.js">
+      <file name="listReducer.js" path="C:\Users\Gabriel Carvalho\Projetos\myCocktail\src\pages\List\listReducer.js">
         <metrics statements="10" coveredstatements="10" conditionals="8" coveredconditionals="8" methods="1" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
         <line num="9" count="1" type="cond" truecount="1" falsecount="0"/>
@@ -87,8 +100,15 @@
       </file>
     </package>
     <package name="src.shared.utils">
-      <metrics statements="4" coveredstatements="4" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
-      <file name="transformString.js" path="C:\Users\gabri\Projetos\myCocktail\src\shared\utils\transformString.js">
+      <metrics statements="8" coveredstatements="8" conditionals="1" coveredconditionals="1" methods="3" coveredmethods="3"/>
+      <file name="testHooks.js" path="C:\Users\Gabriel Carvalho\Projetos\myCocktail\src\shared\utils\testHooks.js">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="8" count="4" type="stmt"/>
+        <line num="9" count="7" type="stmt"/>
+        <line num="12" count="4" type="stmt"/>
+        <line num="17" count="4" type="stmt"/>
+      </file>
+      <file name="transformString.js" path="C:\Users\Gabriel Carvalho\Projetos\myCocktail\src\shared\utils\transformString.js">
         <metrics statements="4" coveredstatements="4" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
         <line num="1" count="2" type="cond" truecount="1" falsecount="0"/>
         <line num="3" count="4" type="stmt"/>
