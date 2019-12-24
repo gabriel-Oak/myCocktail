@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Title } from 'react-native-paper';
 import { Switch } from 'react-native';
 import { Input, Form, RowContainer } from './styles';
-import SelectFilter from './Select';
+import SelectFilter from './select';
 import { theme } from '../../shared/theme';
 import { ListFiltersState } from './hooks';
 

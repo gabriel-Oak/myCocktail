@@ -61,4 +61,4 @@ buck-out/
 
 # Coverage
 #
-.\coverage\
+coverage\

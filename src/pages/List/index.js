@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import { ProgressBar } from 'react-native-paper';
 import { ScrollContainer, PaddedContainer } from '../../shared/theme/containers';
-import ListFilters from './Filters';
+import ListFilters from './filters';
 import { fetchFilters, fetchDrinks, lookUpDrink, changeNameFilter } from './listActions';
 import { connect } from 'react-redux';
 import { theme } from '../../shared/theme';
