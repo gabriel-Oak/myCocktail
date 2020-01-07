@@ -2,6 +2,7 @@ import axios from 'axios';
 import { api } from '../../enviroments';
 
 import transformString from '../../shared/utils/transformString';
+import bugsnag from '../../bugsnag';
 
 export const fetchFilters = type => async dispatch => {
   try {
@@ -43,6 +44,7 @@ export const fetchFilters = type => async dispatch => {
         title: 'Error'
       }
     });
+    bugsnag.notify(e);
   } finally {
     dispatch({ type: 'COMPLETE' });
   }

@@ -39,6 +39,9 @@ target 'myCocktail' do
 
   pod 'react-native-onesignal', :path => '../node_modules/react-native-onesignal'
 
+  pod 'BugsnagReactNative', :path => '../node_modules/bugsnag-react-native'
+
+
   target 'myCocktailTests' do
     inherit! :search_paths
     # Pods for testing

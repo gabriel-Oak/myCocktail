@@ -2,6 +2,7 @@
   "name": "myCocktail",
   "version": "0.0.1",
   "private": true,
+  "bugsnag": "4c063c7850f0e930dc5e01415acd2af1",
   "scripts": {
     "android": "react-native start& react-native run-android",
     "ios": "react-native run-ios",
@@ -16,6 +17,7 @@
     "appcenter-analytics": "^2.6.1",
     "appcenter-crashes": "^2.6.1",
     "axios": "^0.19.0",
+    "bugsnag-react-native": "^2.23.4",
     "moxios": "^0.4.0",
     "react": "16.9.0",
     "react-dom": "^16.12.0",
