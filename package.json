@@ -1,10 +1,11 @@
 {
-  "name": "myCocktail",
+  "name": "my-cocktail",
   "version": "0.0.1",
   "private": true,
   "bugsnag": "4c063c7850f0e930dc5e01415acd2af1",
   "scripts": {
-    "android": "react-native start& react-native run-android",
+    "start:android": "react-native start& react-native run-android",
+    "android": "react-native run-android",
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
@@ -28,7 +29,7 @@
     "react-native-paper": "^3.3.0",
     "react-native-reanimated": "^1.4.0",
     "react-native-screens": "1.0.0-alpha.23",
-    "react-native-vector-icons": "^6.6.0",
+    "react-native-vector-icons": "^6.0.0",
     "react-navigation": "^4.0.10",
     "react-navigation-stack": "^1.10.3",
     "react-redux": "^7.1.3",
